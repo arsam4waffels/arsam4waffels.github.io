@@ -275,7 +275,7 @@ footer .page {
 
   <div class="hero-meta">
     <div class="hm"><span class="hm-val">Java</span><span class="hm-dot"></span><span>primary language</span></div>
-    <div class="hm"><span class="hm-val">3</span><span class="hm-dot"></span><span>pinned projects</span></div>
+    <div class="hm"><span class="hm-val">3</span><span class="hm-dot"></span><span>projects</span></div>
     <div class="hm"><span class="hm-val">experimental</span><span class="hm-dot"></span><span>intentionally small</span></div>
   </div>
 
@@ -283,7 +283,7 @@ footer .page {
 
 <!-- PROJECTS -->
 <div class="sec" id="projects">
-  <span class="sec-tag">pinned repositories</span>
+  <span class="sec-tag">repositories</span>
   <h2>Projects</h2>
 
   <!-- ── enrichable ── -->
@@ -392,16 +392,13 @@ e<span class="pun">.</span><span class="fn">addInformation</span><span class="pu
       </p>
       <div class="card-snippet">
         <div class="snip-bar">complexity / Main.java</div>
-        <div class="snip-body"><span class="cls">ArrayAnalyzer</span><span class="pun">&lt;</span><span class="cls">Integer</span><span class="pun">&gt;</span> analyzer <span class="pun">=</span> <span class="kw">new</span> <span class="cls">ArrayAnalyzer</span><span class="pun">&lt;&gt;();</span>
-<span class="cls">ScoringEngine</span>          engine   <span class="pun">=</span> <span class="kw">new</span> <span class="cls">ScoringEngine</span><span class="pun">();</span>
+        <div class="snip-body"><span class="cls">Complexity</span><span class="pun">&lt;</span><span class="cls">Integer</span><span class="pun">&gt;</span> c <span class="pun">=</span> <span class="kw">new</span> <span class="cls">Complexity</span><span class="pun">.</span><span class="cls">Builder</span><span class="pun">&lt;&gt;(</span><span class="cls">List</span><span class="pun">.</span><span class="fn">of</span><span class="pun">(</span><span class="num">3</span><span class="pun">,</span> <span class="num">1</span><span class="pun">,</span> <span class="num">4</span><span class="pun">,</span> <span class="num">1</span><span class="pun">,</span> <span class="num">5</span><span class="pun">,</span> <span class="num">9</span><span class="pun">,</span> <span class="num">2</span><span class="pun">,</span> <span class="num">6</span><span class="pun">))</span>
+    <span class="pun">.</span><span class="fn">speedOverMemory</span><span class="pun">(</span><span class="kw">true</span><span class="pun">)</span>
+    <span class="pun">.</span><span class="fn">needsStable</span><span class="pun">(</span><span class="kw">false</span><span class="pun">)</span>
+    <span class="pun">.</span><span class="fn">memoryConstrained</span><span class="pun">(</span><span class="kw">false</span><span class="pun">)</span>
+    <span class="pun">.</span><span class="fn">build</span><span class="pun">();</span>
 
-<span class="cls">List</span><span class="pun">&lt;</span><span class="cls">Integer</span><span class="pun">&gt;</span>  list <span class="pun">=</span> <span class="cls">List</span><span class="pun">.</span><span class="fn">of</span><span class="pun">(</span><span class="num">3</span><span class="pun">,</span> <span class="num">1</span><span class="pun">,</span> <span class="num">4</span><span class="pun">,</span> <span class="num">1</span><span class="pun">,</span> <span class="num">5</span><span class="pun">,</span> <span class="num">9</span><span class="pun">);</span>
-<span class="cls">UserPreference</span> pref <span class="pun">=</span> <span class="kw">new</span> <span class="cls">UserPreference</span><span class="pun">(</span><span class="kw">true</span><span class="pun">,</span> <span class="kw">false</span><span class="pun">,</span> <span class="kw">false</span><span class="pun">);</span>
-<span class="cmt">// speedOverMemory=true, stable=false, memConstrained=false</span>
-
-<span class="cls">DataProfile</span>    profile <span class="pun">=</span> analyzer<span class="pun">.</span><span class="fn">analyze</span><span class="pun">(</span>list<span class="pun">);</span>
-<span class="cls">AlgorithmScore</span> result  <span class="pun">=</span> engine<span class="pun">.</span><span class="fn">recommend</span><span class="pun">(</span>profile<span class="pun">,</span> pref<span class="pun">);</span>
-
+<span class="cls">AlgorithmScore</span> result <span class="pun">=</span> c<span class="pun">.</span><span class="fn">analyze</span><span class="pun">();</span>
 <span class="cls">System</span><span class="pun">.</span>out<span class="pun">.</span><span class="fn">println</span><span class="pun">(</span>result<span class="pun">.</span><span class="fn">getAlgorithm</span><span class="pun">().</span><span class="fn">getDisplayName</span><span class="pun">());</span>
 <span class="cls">System</span><span class="pun">.</span>out<span class="pun">.</span><span class="fn">println</span><span class="pun">(</span>result<span class="pun">.</span><span class="fn">getReason</span><span class="pun">());</span></div>
       </div>
