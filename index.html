@@ -6,6 +6,7 @@
   <title>arsam4waffels — Code. Coffee. Oreo</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐈‍⬛</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -74,6 +75,12 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       color: var(--text) !important;
       transition: border-color .12s, box-shadow .12s !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-gh svg {
+      display: block;
     }
     .nav-gh:hover { border-color: var(--dim) !important; box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important; }
 
@@ -270,7 +277,11 @@
     </a>
     <div class="nav-right">
       <a href="#projects">projects</a>
-      <a class="nav-gh" id="navGh" href="https://github.com/arsam4waffels" target="_blank">github ↗</a>
+      <a class="nav-gh" id="navGh" href="https://github.com/arsam4waffels" target="_blank">
+        github <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+      </svg>
+      </a>
     </div>
   </div>
 </nav>
@@ -311,7 +322,7 @@
     <span class="sec-tag">repositories</span>
     <h2>Projects</h2>
 
-    <!-- enrichable --> <div class="proj-card"> <div class="card-bar"> <div class="card-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div> <div class="card-lang"><span class="lang-dot"></span> Java</div> </div> <div class="card-body"> <div class="proj-header"> <a class="proj-name" href="https://github.com/arsam4waffels/enrichable" target="_blank">enrichable</a> <a class="proj-gh-link" href="https://github.com/arsam4waffels/enrichable" target="_blank">view on github ↗</a> </div> <p class="proj-desc"> Structured and configurable exception handling for Java. Build readable exceptions with context, optional codes and causes, configurable error levels, metadata, and logging — without making the exception itself complicated. </p> <div class="card-snippet"> <div class="snip-bar">enrichable / Main.java</div> <div class="snip-body"><span class="cls">EnrichableException</span> exception <span class="pun">=</span> <span class="kw">new</span> <span class="cls">EnrichableException</span><span class="pun">.</span><span class="fn">Builder</span><span class="pun">(</span><br>&nbsp;&nbsp;<span class="str">"Database"</span><span class="pun">,</span> <span class="str">"Connection failed"</span><br><span class="pun">)</span><span class="pun">.</span><span class="fn">code</span><span class="pun">(</span><span class="str">"DB-001"</span><span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">level</span><span class="pun">(</span><span class="cls">ErrorLevel</span><span class="pun">.</span><span class="lo-x">CRITICAL</span><span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">cause</span><span class="pun">(</span>originalException<span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">build</span><span class="pun">();</span></div> </div> </div> <div class="card-tags"> <span class="tag">exception-handling</span><span class="tag">builder-api</span><span class="tag">metadata</span><span class="tag">java</span> </div> </div>
+    <!-- enrichable --> <div class="proj-card"> <div class="card-bar"> <div class="card-dots"><span class="cd cd-r"></span><span class="cd cd-y"></span><span class="cd cd-g"></span></div> <div class="card-lang"><span class="lang-dot"></span> Java</div> </div> <div class="card-body"> <div class="proj-header"> <a class="proj-name" href="https://github.com/arsam4waffels/enrichable" target="_blank">enrichable</a> <a class="proj-gh-link" href="https://github.com/arsam4waffels/enrichable" target="_blank">view on github</a> </div> <p class="proj-desc"> Structured and configurable exception handling for Java. Build readable exceptions with context, optional codes and causes, configurable error levels, metadata, and logging — without making the exception itself complicated. </p> <div class="card-snippet"> <div class="snip-bar">enrichable / Main.java</div> <div class="snip-body"><span class="cls">EnrichableException</span> exception <span class="pun">=</span> <span class="kw">new</span> <span class="cls">EnrichableException</span><span class="pun">.</span><span class="fn">Builder</span><span class="pun">(</span><br>&nbsp;&nbsp;<span class="str">"Database"</span><span class="pun">,</span> <span class="str">"Connection failed"</span><br><span class="pun">)</span><span class="pun">.</span><span class="fn">code</span><span class="pun">(</span><span class="str">"DB-001"</span><span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">level</span><span class="pun">(</span><span class="cls">ErrorLevel</span><span class="pun">.</span><span class="lo-x">CRITICAL</span><span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">cause</span><span class="pun">(</span>originalException<span class="pun">)</span><br>&nbsp;&nbsp;<span class="pun">.</span><span class="fn">build</span><span class="pun">();</span></div> </div> </div> <div class="card-tags"> <span class="tag">exception-handling</span><span class="tag">builder-api</span><span class="tag">metadata</span><span class="tag">java</span> </div> </div>
 
     <!-- guardia -->
     <div class="proj-card">
@@ -322,7 +333,7 @@
       <div class="card-body">
         <div class="proj-header">
           <a class="proj-name" href="https://github.com/arsam4waffels/guardia" target="_blank">guardia</a>
-          <a class="proj-gh-link" href="https://github.com/arsam4waffels/guardia" target="_blank">view on github ↗</a>
+          <a class="proj-gh-link" href="https://github.com/arsam4waffels/guardia" target="_blank">view on github</a>
         </div>
         <p class="proj-desc">Lightweight annotation-based Java validation library built from scratch. Validate any object using simple annotations — no configuration, no dependencies. Extensible by design: adding a new constraint never requires touching the engine.</p>
         <div class="card-snippet">
@@ -359,7 +370,7 @@
       <div class="card-body">
         <div class="proj-header">
           <a class="proj-name" href="https://github.com/arsam4waffels/complexity" target="_blank">complexity</a>
-          <a class="proj-gh-link" href="https://github.com/arsam4waffels/complexity" target="_blank">view on github ↗</a>
+          <a class="proj-gh-link" href="https://github.com/arsam4waffels/complexity" target="_blank">view on github</a>
         </div>
         <p class="proj-desc">A sorting algorithm advisor. Give it a list and your priorities — it analyzes the data profile and tells you which sorting algorithm to use and why. Sits between "just use QuickSort" and reading research papers to sort 8 integers.</p>
         <div class="card-snippet">
